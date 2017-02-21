@@ -6,11 +6,14 @@ A1. The directory structure in Eclipse project should be the following:
    Affordance (Java project name)
     -src
     -CAD-120 annotations
+    -O-PrO.owl
     -Output
     
 A2. All my CAD-120 annotations are present in  "/home/rupam/Documents/JavaPhDCode/Affordance". You have to replace the content present in line number 46 of "MasterMain.java" with your own location of CAD-120 annotations.
 
 A3. A particular high level activity has been represented by a unique ten digit string (like 1204150645) in CAD-120 dataset. For testing / training on a new high level activity; you have to manually change the variable name (MasterMain.rawTDS) with a specific ten digit string (line number 49 of "MasterMain.java").   
+
+A4. O-PrO ontology has been used in our experiments. Download O-PrO.owl from https://github.com/RupamBhattacharyya/O-PrO-Object-Property-Ontology. Now, place this downloaded item alongside with the CAD-120 annotations. 
    
 Output:------
 
