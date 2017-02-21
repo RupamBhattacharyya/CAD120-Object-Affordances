@@ -13,7 +13,7 @@ A2. All my CAD-120 annotations are present in  "/home/rupam/Documents/JavaPhDCod
 
 A3. A particular high level activity has been represented by a unique ten digit string (like 1204150645) in CAD-120 dataset. For testing / training on a new high level activity; you have to manually change the variable name (MasterMain.rawTDS) with a specific ten digit string (line number 49 of "MasterMain.java").   
 
-A4. O-PrO ontology has been used in our experiments. Download O-PrO.owl from https://github.com/RupamBhattacharyya/O-PrO-Object-Property-Ontology. Now, place this downloaded item alongside with the CAD-120 annotations. 
+A4. O-PrO ontology has been used in our experiments. Download O-PrO.owl from https://git.io/viO6Q. Now, place this downloaded item alongside with the CAD-120 annotations. 
    
 Output:------
 
