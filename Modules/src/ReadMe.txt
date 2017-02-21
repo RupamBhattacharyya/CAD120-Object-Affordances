@@ -13,7 +13,7 @@ Input:-------
 
 3. A particular high level activity has been represented by a unique ten digit string (like 1204150645) in CAD-120 dataset. 
    For testing / training on a new high level activity; you have to manually change the variable name (MasterMain.rawTDS) \
-   with a specific ten digit string.   
+   with a specific ten digit string (line number 49 of "MasterMain.java").   
    
 Output:------
 
