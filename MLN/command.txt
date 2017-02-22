@@ -1,0 +1,4 @@
+For "Closing" Sub-activity, type the following two commands one by one in your terminal-------------
+
+./learnwts -d -i affordancerules.mln -o closing-out.mln -t closing-train.db -ne Affordance
+./infer -ms -i closing-out.mln -r closing.result -e closing-test.db -q Affordance
