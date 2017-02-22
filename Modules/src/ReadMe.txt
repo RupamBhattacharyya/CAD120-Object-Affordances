@@ -1,5 +1,6 @@
-Following procedure need to be followed to run all the above files successfully.
-
+Following procedure need to be followed to run all the above files successfully. Please note that two libraries namely "org.semanticweb.hermit-1.3.8.1.jar" and "owlapi-distribution-3.4.3-bin.jar" need to be present as "Referenced Libraries" in the 
+java directory structure mentioned below.
+ 
 Input:-------
 
 A1. The directory structure in Eclipse project should be the following:
