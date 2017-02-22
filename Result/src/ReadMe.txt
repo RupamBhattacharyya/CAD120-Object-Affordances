@@ -1,4 +1,4 @@
-Following procedure need to be followed to run Test.java successfully. I would like to advise the readers to go through the MLN folder's content (ReadMe.txt) before diving into the “Result” folder. 
+Following procedure need to be followed to run Test.java successfully. I would like to advise the readers to go through the MLN folder's content (ReadMe.txt) before diving into the contents of “Result” folder. 
 
 The directory structure in Eclipse project should be the following:
    TestApproach (Java project name)
