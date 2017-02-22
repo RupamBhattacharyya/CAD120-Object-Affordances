@@ -165,8 +165,6 @@ public class DeductionModule{
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1)+m;
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Far("+objNames[m]+", HEAD)");
-	 			//writer.print("Far("+lowerToUpperCase+", HEAD)");
 	 			writer.print("Near("+lowerToUpperCase+", HEAD)");
 	 			//writer.print("---Distance---"+distance1);
 	 		}
@@ -175,8 +173,6 @@ public class DeductionModule{
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1)+m;
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Medium("+objNames[m]+", HEAD)");
-	 			//writer.print("Medium("+lowerToUpperCase+", HEAD)");
 	 			writer.print("Near("+lowerToUpperCase+", HEAD)");
 	 			//writer.print("---Distance---"+distance1);
 	 		}
@@ -185,8 +181,6 @@ public class DeductionModule{
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1)+m;
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Near("+objNames[m]+", HEAD)");
-	 			//writer.print("Near("+lowerToUpperCase+", HEAD)");
 	 			writer.print("Touch("+lowerToUpperCase+", HEAD)");
 	 			//writer.print("---Distance---"+distance1);
 	 		}
@@ -206,10 +200,7 @@ public class DeductionModule{
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1)+m;
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Touch("+objNames[m]+", HEAD)");
 	 			// Since Ignore has been dropped from MLN; we need to rename "ignore" as the new "Far". (09/01/2017)
-	 			//writer.print("Ignore("+lowerToUpperCase+", HEAD)");
-	 			//writer.print("Far("+lowerToUpperCase+", HEAD)");
 	 			writer.print("Medium("+lowerToUpperCase+", HEAD)");
 	 			//writer.print("---Distance---"+distance1);
 	 		}
@@ -227,8 +218,6 @@ public class DeductionModule{
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
 	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Far("+objNames[m]+", TORSO)");
-	 			//writer.print("Far("+lowerToUpperCase+", TORSO)");
 	 			writer.print("Near("+lowerToUpperCase+", TORSO)");
 	 			//writer.print("---Distance---"+distance2);
 	 		}
@@ -238,8 +227,6 @@ public class DeductionModule{
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
 	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Medium("+objNames[m]+", TORSO)");
-	 			//writer.print("Medium("+lowerToUpperCase+", TORSO)");
 	 			writer.print("Near("+lowerToUpperCase+", TORSO)");
 	 			//writer.print("---Distance---"+distance2);
 	 		}
@@ -249,8 +236,6 @@ public class DeductionModule{
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
 	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Near("+objNames[m]+", TORSO)");
-	 			//writer.print("Near("+lowerToUpperCase+", TORSO)");
 	 			writer.print("Touch("+lowerToUpperCase+", TORSO)");
 	 			//writer.print("---Distance---"+distance2);
 	 		}
@@ -270,11 +255,7 @@ public class DeductionModule{
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1)+m;
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Touch("+objNames[m]+", TORSO)");
-	 		    // Since Ignore has been dropped from MLN; we need to rename "ignore" as the new "Far". (09/01/2017)
-	 			//writer.print("Ignore("+lowerToUpperCase+", TORSO)");
-	 			//writer.print("Far("+lowerToUpperCase+", TORSO)");
+	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);	
 	 			writer.print("Medium("+lowerToUpperCase+", TORSO)");
 	 			//writer.print("---Distance---"+distance2);
 	 		}
@@ -290,8 +271,6 @@ public class DeductionModule{
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
 	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Far("+objNames[m]+", LHAND)");
-	 			//writer.print("Far("+lowerToUpperCase+", LHAND)");
 	 			writer.print("Near("+lowerToUpperCase+", LHAND)");
 	 			//writer.print("---Distance---"+distance3);
 	 		}
@@ -301,8 +280,6 @@ public class DeductionModule{
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
 	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Medium("+objNames[m]+", LHAND)");
-	 			//writer.print("Medium("+lowerToUpperCase+", LHAND)");
 	 			writer.print("Near("+lowerToUpperCase+", LHAND)");
 	 			//writer.print("---Distance---"+distance3);
 	 		}
@@ -312,8 +289,6 @@ public class DeductionModule{
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
 	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Near("+objNames[m]+", LHAND)");
-	 			//writer.print("Near("+lowerToUpperCase+", LHAND)");
 	 			writer.print("Touch("+lowerToUpperCase+", LHAND)");
 	 			//writer.print("---Distance---"+distance3);
 	 		}
@@ -334,10 +309,6 @@ public class DeductionModule{
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
 	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Touch("+objNames[m]+", LHAND)");
-	 			//Since Ignore has been dropped from MLN; we need to rename "ignore" as the new "Far". (09/01/2017)
-	 			//writer.print("Ignore("+lowerToUpperCase+", LHAND)");
-	 			//writer.print("Far("+lowerToUpperCase+", LHAND)");
 	 			writer.print("Medium("+lowerToUpperCase+", LHAND)");
 	 			//writer.print("---Distance---"+distance3);
 	 		}
@@ -353,8 +324,6 @@ public class DeductionModule{
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
 	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Far("+objNames[m]+", RHAND)");
-	 			//writer.print("Far("+lowerToUpperCase+", RHAND)");
 	 			writer.print("Near("+lowerToUpperCase+", RHAND)");
 	 			//writer.print("---Distance---"+distance4);
 	 		}
@@ -364,8 +333,6 @@ public class DeductionModule{
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
 	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Medium("+objNames[m]+", RHAND)");
-	 			//writer.print("Medium("+lowerToUpperCase+", RHAND)");
 	 			writer.print("Near("+lowerToUpperCase+", RHAND)");
 	 			//writer.print("---Distance---"+distance4);
 	 		}
@@ -375,8 +342,6 @@ public class DeductionModule{
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
 	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Near("+objNames[m]+", RHAND)");
-	 			//writer.print("Near("+lowerToUpperCase+", RHAND)");
 	 			writer.print("Touch("+lowerToUpperCase+", RHAND)");
 	 			//writer.print("---Distance---"+distance4);
 	 		}
@@ -396,11 +361,7 @@ public class DeductionModule{
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1)+m;
 	 			else
 	 				lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);
-	 			//writer.print("Touch("+objNames[m]+", RHAND)");
-	 			//Since Ignore has been dropped from MLN; we need to rename "ignore" as the new "Far". (09/01/2017)
-	 			//writer.print("Ignore("+lowerToUpperCase+", RHAND)");
-	 			//writer.print("Far("+lowerToUpperCase+", RHAND)");
+	 			//lowerToUpperCase=objNames[m].substring(0, 1).toUpperCase() + objNames[m].substring(1);	
 	 			writer.print("Medium("+lowerToUpperCase+", RHAND)");
 	 			//writer.print("---Distance---"+distance4);
 	 		}
@@ -528,14 +489,11 @@ public class DeductionModule{
 			 		 		lowerUpper1=objNames[ii].substring(0, 1).toUpperCase() + objNames[ii].substring(1);
 			 		 		lowerUpper2=objNames[jj].substring(0, 1).toUpperCase() + objNames[jj].substring(1);
 			 		 	}
-			 		 	//storeMe="Far("+objNames[ii]+","+objNames[jj]+")";
-			 		 	//storeMe="Far("+lowerUpper1+","+lowerUpper2+")";
 			 		 	storeMe="Near("+lowerUpper1+","+lowerUpper2+")";
 			 		    returnRelName[totRel]=storeMe;
 			 		    totRel++;
 			 	}
 			 	else if(distance>200.00 && distance<=400.00){
-			 			//writer.print("Medium("+objNames[m]+", RHAND)");
 			 			//lowerUpper1=objNames[ii].substring(0, 1).toUpperCase() + objNames[ii].substring(1);
 			 			//lowerUpper2=objNames[jj].substring(0, 1).toUpperCase() + objNames[jj].substring(1);
 				 		if(flagMatch111==1 && flag111==0){
@@ -546,14 +504,11 @@ public class DeductionModule{
 			 		 		lowerUpper1=objNames[ii].substring(0, 1).toUpperCase() + objNames[ii].substring(1);
 			 		 		lowerUpper2=objNames[jj].substring(0, 1).toUpperCase() + objNames[jj].substring(1);
 			 		 	}
-		 		 		//storeMe="Medium("+objNames[ii]+","+objNames[jj]+")";
-			 			//storeMe="Medium("+lowerUpper1+","+lowerUpper2+")";
 				 		storeMe="Near("+lowerUpper1+","+lowerUpper2+")";
 		 		 		returnRelName[totRel]=storeMe;
 		 		 		totRel++;
 			 	}
 			 	else if(distance>100.00 && distance<=200.00){
-			 			//writer.print("Near("+objNames[m]+", RHAND)");
 			 			//lowerUpper1=objNames[ii].substring(0, 1).toUpperCase() + objNames[ii].substring(1);
 			 			//lowerUpper2=objNames[jj].substring(0, 1).toUpperCase() + objNames[jj].substring(1);
 				 		if(flagMatch111==1 && flag111==0){
@@ -564,8 +519,6 @@ public class DeductionModule{
 			 		 		lowerUpper1=objNames[ii].substring(0, 1).toUpperCase() + objNames[ii].substring(1);
 			 		 		lowerUpper2=objNames[jj].substring(0, 1).toUpperCase() + objNames[jj].substring(1);
 			 		 	}
-		 		 		//storeMe="Near("+objNames[ii]+","+objNames[jj]+")";
-			 			//storeMe="Near("+lowerUpper1+","+lowerUpper2+")";
 				 		storeMe="Touch("+lowerUpper1+","+lowerUpper2+")";
 		 		 		returnRelName[totRel]=storeMe;
 		 		 		totRel++;
@@ -581,8 +534,6 @@ public class DeductionModule{
 			 		 		lowerUpper1=objNames[ii].substring(0, 1).toUpperCase() + objNames[ii].substring(1);
 			 		 		lowerUpper2=objNames[jj].substring(0, 1).toUpperCase() + objNames[jj].substring(1);
 			 		 	}
-			 			//writer.print("Touch("+objNames[m]+", RHAND)");
-		 		 		//storeMe="Touch("+objNames[ii]+","+objNames[jj]+")";
 		 		 		storeMe="Touch("+lowerUpper1+","+lowerUpper2+")";
 		 		 		returnRelName[totRel]=storeMe;
 		 		 		totRel++;
@@ -596,8 +547,6 @@ public class DeductionModule{
 		 		 		lowerUpper1=objNames[ii].substring(0, 1).toUpperCase() + objNames[ii].substring(1);
 		 		 		lowerUpper2=objNames[jj].substring(0, 1).toUpperCase() + objNames[jj].substring(1);
 		 		 	}
-		 			//writer.print("Touch("+objNames[m]+", RHAND)");
-	 		 		//storeMe="Touch("+objNames[ii]+","+objNames[jj]+")";
 	 		 		storeMe="Medium("+lowerUpper1+","+lowerUpper2+")";
 	 		 		returnRelName[totRel]=storeMe;
 	 		 		totRel++;
