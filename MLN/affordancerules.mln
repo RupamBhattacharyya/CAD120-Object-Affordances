@@ -1,0 +1,122 @@
+//This mln is created to see whether a LIST of affordance can be present or not.
+// Modeling constraint="Each object at a particular RGBD frame number has exactly one affordance id"
+//affordance={Movable, Reachable, Placeable, Pourable, Stationary, Openable, Closeable, Containable, Cleanable, Cleaner, Pourto, Drinkable}
+affordance={Movable, Reachable, Placeable, Pourable, Openable, Closeable, Containable, Cleanable, Cleaner, Pourto, Drinkable}
+humanJointName={LHAND, RHAND, HEAD, TORSO}
+partName={Lid, Handle, Door, Tray}
+setConcavity={MConcavity, MConcavityInv, HConcavity, HConcavityInv, LConcavity, LConcavityInv, NIL}
+
+//Evidence
+Medium(object, humanJointName)                                          
+Medium(object1, object2)
+Near(object, humanJointName)
+Near(object1, object2)
+Touch(object, humanJointName)
+Touch(object1,object2)
+//Ignore(object, humanJointName)
+Far(object, humanJointName)
+
+LowVolume(object)
+MediumVolume(object)
+HighVolume(object)
+
+HeavyWeight(object)
+MediumWeight(object)
+LightWeight(object)
+
+Cuboid(object)
+Flat(object)
+Pole(object)
+Disk(object)
+Cylinder(object)
+Wedge(object)
+Sphere(object)
+
+
+//hasPart(object, partName)
+hasImmovablePart(object, partName)
+hasDetachablePart(object, partName)
+hasNonDetachablePart(object, partName)
+
+hasBaseConcavity(object, setConcavity)
+
+MediumConcavity(object)
+MediumConcavityInv(object)
+HighConcavity(object)
+HighConcavityInv(object)
+Nil(object)
+LowConcavity(object)
+LowConcavityInv(object)
+
+//Query
+Affordance(affordance, object)
+
+//Rule
+//y=Joint, x=object, z=Object
+//Rule 1: Reachable
+Medium(x, y) => Affordance(Reachable, x)
+Medium(x, y) ^ !Touch(x,y) ^ !hasBaseConcavity(x, "Nil") ^ !HighConcavity(x) => Affordance(Reachable, x)
+
+
+//Rule 2: Movable
+(Near(x, y) ^ LightWeight(x)) => Affordance(Movable, x)
+(Near(x, y) ^ MediumWeight(x) ^ LowVolume(x)) => Affordance(Movable, x)
+
+//Rule 3: Placeable
+hasBaseConcavity(x, "Nil") ^ LightWeight(x) ^ LowVolume(x)=>  Affordance(Placeable,x)
+
+//Rule 4.1: Pourable
+LightWeight(x) ^ LowVolume(x) ^ HighConcavity(x) ^ hasImmovablePart(x, z) => Affordance(Pourable,x)
+LightWeight(x) ^ LowVolume(x) ^ HighConcavityInv(x) ^ hasImmovablePart(x, z) => Affordance(Pourable,x)
+LightWeight(x) ^ LowVolume(x) ^ HighConcavity(x) ^ hasDetachablePart(x, z) => Affordance(Pourable,x)
+LightWeight(x) ^ LowVolume(x) ^ HighConcavityInv(x) ^ hasDetachablePart(x, z) => Affordance(Pourable,x)
+
+//Rule 5.1: Pourto
+//Touch(x, y) ^ Near(x, x) ^ MediumVolume(x) ^ HighConcavityInv(x) => Affordance(Pourto,x)
+LightWeight(x) ^ MediumVolume(x) ^ HighConcavity(x)=> Affordance(Pourto,x)
+LightWeight(x) ^ MediumVolume(x) ^ HighConcavityInv(x)=> Affordance(Pourto,x)
+
+//Rule 5.2: Pourto
+//Near(x, y) ^ Near(x, x) ^ MediumVolume(x) ^ HighConcavityInv(x) => Affordance(Pourto,x)
+MediumVolume(x) ^ HighConcavity(x) ^ hasBaseConcavity(x, "Nil") => Affordance(Pourto,x)
+MediumVolume(x) ^ HighConcavityInv(x) ^ hasBaseConcavity(x, "Nil")=> Affordance(Pourto,x)
+
+
+//Rule 6: Containable
+MediumVolume(x) ^ HighConcavityInv(x) => Affordance(Containable,x)
+MediumVolume(x) ^ HighConcavity(x) => Affordance(Containable,x)
+LowVolume(x) ^ HighConcavityInv(x) => Affordance(Containable,x)
+LowVolume(x) ^ HighConcavity(x) => Affordance(Containable,x)
+
+//Rule 7.1: Drinkable
+LightWeight(x) ^ LowVolume(x) ^ MediumConcavityInv(x) ^ hasImmovablePart(x, z) => Affordance(Drinkable,x)
+LightWeight(x) ^ LowVolume(x) ^ MediumConcavity(x) ^ hasImmovablePart(x, z) => Affordance(Drinkable,x)
+
+//Rule 8.1: Openable
+(hasDetachablePart(x,z)) ^ (hasNonDetachablePart(x,w))=> Affordance(Openable,x)
+(hasDetachablePart(x,z))=> Affordance(Openable,x)
+(hasNonDetachablePart(x,z))=> Affordance(Openable,x)
+
+//Rule 9.1: Closeable near
+(hasDetachablePart(x,z)) ^ (hasNonDetachablePart(x,w))=> Affordance(Closeable,x)
+(hasDetachablePart(x,z))=> Affordance(Closeable,x)
+(hasNonDetachablePart(x,z))=> Affordance(Closeable,x)
+
+
+//Rule 10: Cleanable
+MediumVolume(x) ^ HighConcavityInv(x)   =>  Affordance(Cleanable,x)
+MediumVolume(x) ^ HighConcavity(x)   =>  Affordance(Cleanable,x)
+
+
+//Rule 11:Cleaner
+//Touch(x, y) ^   Touch(x, x) ^  LightWeight(x)  ^ Nil(x) ^ hasBaseConcavity(x, "Nil")=> Affordance(Cleaner,x)
+LightWeight(x)  ^ Nil(x) => Affordance(Cleaner,x)
+
+
+//Rule 12: Stationary
+//Ignore(x, y) => Affordance(Stationary,x)
+
+//Rule 12.1: Stationary *****REMOVING STATIONARY RULES
+//Far(x, y) => Affordance(Stationary,x)
+// x and y both are objects
+//Far(x, y) => Affordance(Stationary,y) 
