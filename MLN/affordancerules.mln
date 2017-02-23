@@ -1,6 +1,4 @@
-//This mln is created to see whether a LIST of affordance can be present or not.
 // Modeling constraint="Each object at a particular RGBD frame number has exactly one affordance id"
-//affordance={Movable, Reachable, Placeable, Pourable, Stationary, Openable, Closeable, Containable, Cleanable, Cleaner, Pourto, Drinkable}
 affordance={Movable, Reachable, Placeable, Pourable, Openable, Closeable, Containable, Cleanable, Cleaner, Pourto, Drinkable}
 humanJointName={LHAND, RHAND, HEAD, TORSO}
 partName={Lid, Handle, Door, Tray}
