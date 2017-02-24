@@ -75,7 +75,7 @@ public class OntologyProcessingModule{
         // Load an example ontology.
         OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
         System.out.println("b4 IRI---");
-        IRI ontologyIRI =IRI.create("file:///home/rupam/Documents/JavaPhDCode/ICAART/src/OPrO.owl"); 
+        IRI ontologyIRI =IRI.create("file:///home/rupam/Documents/JavaPhDCode/Affordance/src/OPrO.owl"); 
         System.out.println("after IRI---");
         OWLOntology ontology = manager.loadOntology(ontologyIRI);
         // We need a reasoner to do our query answering
