@@ -578,8 +578,9 @@ public class DeductionModule{
 		//System.out.println("pasteCommand2 "+pasteCommand2);
 		System.out.println("Please OPEN YOUR Terminal");
 		System.out.println("GO to alchemy/bin as a ROOT user");
+		System.out.println("Place your generated content (test files / train files) inside alchemy/bin");
 		//System.out.println("PASTE ./learnwts -d -i affordancerules.mln -o closing-out.mln -t closing-train.db -ne Affordance");
-		System.out.println("PASTE ./learnwts -d -i affordancerules.mln -o " +pasteCommand2+ " -t "+pasteCommand1+ " -ne Affordance");
+		//System.out.println("PASTE ./learnwts -d -i affordancerules.mln -o " +pasteCommand2+ " -t "+pasteCommand1+ " -ne Affordance");
 		System.out.println();
 	}
 }
