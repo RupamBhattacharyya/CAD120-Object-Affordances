@@ -6,8 +6,8 @@ Input:-------
 A1. The directory structure in Eclipse project should be the following:
    Affordance (Java project name)
     -src
+     -O-PrO.owl
     -CAD-120 annotations
-    -O-PrO.owl
     -Output
     
 A2. All my CAD-120 annotations are present in  "/home/rupam/Documents/JavaPhDCode/Affordance". You have to replace the content present in line number 46 of "MasterMain.java" with your own location of CAD-120 annotations.
