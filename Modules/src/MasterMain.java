@@ -179,8 +179,8 @@ public class MasterMain{
 			DeductionModule d=new DeductionModule();
 			d.typeCommand(MasterMain.subactivityIdGroundTruth, MasterMain.rawTDS);
 			DecisionModule dm=new DecisionModule();
-			dm.typeCommand(MasterMain.subactivityIdGroundTruth, MasterMain.rawTDS);
-			dm.printResult(MasterMain.subactivityIdGroundTruth, MasterMain.rawTDS, MasterMain.parentPath);
+			//dm.typeCommand(MasterMain.subactivityIdGroundTruth, MasterMain.rawTDS);
+			//dm.printResult(MasterMain.subactivityIdGroundTruth, MasterMain.rawTDS, MasterMain.parentPath);
 			// Above command internally calls printResult() 
 			System.out.println("***********");
 		}	
